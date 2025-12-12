@@ -1,4 +1,12 @@
 @media screen and (max-width: 1400px) {
+  /* Make sections auto-height on small screens */
+@media screen and (max-width: 1200px) {
+  section {
+    height: auto !important;
+    padding-top: 3rem;
+  }
+}
+
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -46,6 +54,99 @@
     margin-top: 0;
   }
 }
+/* Skills: rows should wrap / stack on smaller screens */
+@media screen and (max-width: 900px) {
+  /* make skills rows flow vertically */
+  .skills-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  /* let each card take full width with sensible max */
+  .skills-row .details-container {
+    width: 100%;
+    max-width: 720px; /* desktop limit */
+    min-width: auto;
+    padding: 1.2rem;
+  }
+}
+/* Inside skill card: change to single column on narrow screens */
+@media screen and (max-width: 700px) {
+  .details-container .article-container {
+    grid-template-columns: 1fr; /* single column */
+    column-gap: 0;
+    row-gap: 1rem;
+    align-items: start;
+  }
+
+  /* article rows get full width and more breathing room */
+  .details-container .article-container article {
+    width: 100%;
+    padding: 0.25rem 0;
+  }
+
+  /* slightly smaller icons & text for small screens */
+  .details-container .article-container article .icon {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-top: 4px;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .details-container {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .details-container h2,
+  .experience-sub-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  article h3 {
+    font-size: 1rem;
+  }
+
+  article p {
+    font-size: 0.95rem;
+  }
+
+  .skills-row {
+    gap: 1rem;
+  }
+}
+/* Ensure the parent wrapper centers children on narrow screens */
+@media screen and (max-width: 900px) {
+  .about-containers, /* used by skills & projects */
+  .experience-details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-containers > .details-container,
+  .experience-details-container .details-container {
+    width: 100%;
+    max-width: 900px;
+  }
+}
+/* Keep title centered, skill rows left */
+.details-container h2 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.details-container .article-container,
+.details-container .article-container article div {
+  text-align: left;
+}
+
+
 
 @media screen and (max-width: 600px) {
   #contact,
