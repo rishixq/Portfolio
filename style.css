@@ -1,0 +1,727 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  /* Soft gradient */
+  background: linear-gradient(135deg, #fcfcfc 0%, #ffffff 40%, #ffffff 100%);
+  
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+/* NAVBAR + LINKS */
+
+/* ============================
+      MODERN GLASS NAVBAR
+   ============================ */
+
+/* ============================
+      MODERN WHITE GLASS NAVBAR
+   ============================ */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+
+  /* White Glass Effect */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nav links container */
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+/* Links appearance */
+nav a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* Underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #99aa9b; /* Blue underline */
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #929492; /* Slight blue hover */
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Base button */
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+/* BUTTON 1 – Dark button */
+.btn-color-1 {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(245, 243, 243);
+  color: black;
+  border-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* BUTTON 2 – Light outline button */
+.btn-color-2 {
+  background: white;
+  color: black;
+}
+
+.btn-color-2:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: rgb(242, 239, 239);
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  text-align: left;
+
+  /* IMPORTANT FOR HOVER */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+  
+       /* make box content left aligned */
+
+
+}
+
+/* WORKING HOVER EFFECT */
+.details-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+  background: white;
+  cursor: pointer;
+}
+.details-container h2 {
+  text-align: center !important;
+  width: 100%;
+}
+
+
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+/* Center ONLY icon + title inside About cards */
+#about .details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* center icon + title */
+  text-align: center;     /* center the title */
+}
+
+/* Keep description left-aligned */
+#about .details-container p {
+  text-align: center !important;
+  width: 90%;             /* optional for neat alignment */
+  margin-top: 0.5rem;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* Container inside each skill box */
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 equal columns */
+  column-gap: 3rem;
+  row-gap: 1.5rem;
+
+  width: 100%;
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* Each skill row (icon + text) */
+article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  text-align: left;   /* force text inside article to stay left */
+}
+
+
+article .icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+
+
+
+/* Icon inside skill row */
+article .icon {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(242, 239, 239);
+}
+
+/* FIX PROJECT IMAGE ALIGNMENT */
+#projects .article-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#projects .about-containers {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* <— this is missing */
+  gap: 3rem;
+  width: 100%;
+}
+
+/* FIX PROJECT IMAGE SIZE & CENTERING */
+.project-img {
+  width: 90%;
+  max-width: 380px;
+  height: 200px;
+  object-fit: contain;   /* Show full screenshot */
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+#projects .project-title {
+  text-align: center !important;
+  width: 100%;
+  margin: 0.2rem auto 0 auto;
+  margin-top: -10px;
+  display: block;
+}
+
+/* Center project titles only */
+#projects .experience-sub-title-project-title {
+  text-align: center !important;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+/* CONTACT SECTION */
+#contact {
+  display: flex;
+  color: black;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+/* CHANGE EMAIL + LINKEDIN FONT COLOR */
+#contact .contact-info-container a {
+  color: black;               /* normal color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#contact .contact-info-container a:hover {
+  color: #0077cc;               /* normal color */               /* hover color */
+  text-decoration: underline;
+}
+
+/* CONTACT BOX */
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  background: rgb(242, 239, 239);     /* FIXED */
+  margin: 2rem auto;
+  padding: 0.5rem 1.5rem;
+}
+
+/* INDIVIDUAL CONTACT ITEM */
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+/* ICONS */
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Typing effect cursor (added) */
+#typing-text::after {
+  content: "|";
+  margin-left: 6px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+/* Bouncing animation for profile image */
+.bounce {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+/* Modern Skills Grid (unchanged) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Skill Card (unchanged) */
+.skill-card {
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Title center is fine */
+.skill-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* FIXED LIST ALIGNMENT */
+.skill-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Left aligned text */
+.skill-card li {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-align: left;
+  justify-content: flex-start;  /* FIX: Align left */
+}
+
+/* Black bullet point */
+.skill-card li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: black;  /* FIX: bullet color black */
+  border-radius: 50%;
+  display: inline-block;
+} 
+.skills-row {
+  display: flex;
+  justify-content: center;   /* center the boxes */
+  align-items: stretch;
+  gap: 3rem;                  /* spacing between boxes */
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+
+/* Make each details-container take equal width on wide screens */
+.skills-row .details-container {
+  flex: 1;
+  max-width: 600px;           /* prevents overly wide boxes */
+  min-width: 350px;           /* ensures boxes don't shrink */
+}
+
+/* Hover effect for skill boxes */
+.details-container {
+  transition: all 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+}
+
+
+

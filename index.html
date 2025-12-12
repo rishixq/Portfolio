@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <div class="blob"></div>
+    <div class="blob2"></div>
+
+    <nav id="desktop-nav">
+      <div class="logo">&lt;RK&gt;</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Rishi Kishore</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/MYPIC3.png" alt="Rishi Kishore profile picture" class="bounce" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Rishi Kishore</h1>
+        <p class="section__text__p2">
+          <span id="typing-text"></span>
+        </p>
+
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/RESUME (RISHI Kishore).pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Let's Connect
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/rishi-kishore-15b17126a/'"
+
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/rishixq'"
+          />
+          <img
+            src="./assets/figma.png"
+            alt="My Figma profile"
+            class="icon"
+            onclick="location.href='https://www.figma.com/@rishi48'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/MYPIC6.jpeg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Final Year B.Tech Computer Science and Engineering Student @ SRM Institute of Science and Technology (Cgpa: 9.36)</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Achievement</h3>
+              <p>Merit Scholarship Holder For Academic Excellence</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hi, I’m Rishi a final-year Computer Science Engineering student passionate about building data driven, intelligent applications. My interests lie in Machine Learning, Data Analytics, LLM-based systems, RAG pipelines, and modern full-stack development.I’m currently looking for internship opportunities in:<br>Data Science • Machine Learning • AI Engineering • Analytics • Software Engineering
+              <br>Let’s connect and create something impactful!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
+    </section>
+    <section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Skills</h1>
+
+  <div class="experience-details-container">
+
+    <!-- ROW 1: Box 1 + Box 2 -->
+    <div class="skills-row">
+      <!-- BOX 1: AI & ML -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">AIML</h2>
+        <div class="article-container">
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Prompt Engineering</h3><p>Experienced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>RAG</h3><p>Experienced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>LangChain</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Groq LLaMA</h3><p>Basic</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>HuggingFace MiniLM</h3><p>Basic</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Machine Learning</h3><p>Intermediate</p></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- BOX 2: Data Science -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Data Science & Analytics</h2>
+        <div class="article-container">
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Python</h3><p>Experienced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>SQL</h3><p>Experienced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Pandas</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>NumPy</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Data Analysis</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Data Visualization</h3><p>Intermediate</p></div>
+          </article>
+        </div>
+      </div>
+    </div> <!-- end row 1 -->
+
+    <!-- ROW 2: Box 3 + Box 4 -->
+    <div class="skills-row">
+      <!-- BOX 3: Full-Stack Development -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Full-Stack Development</h2>
+        <div class="article-container">
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>React</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Next.js 14</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>TailwindCSS</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Supabase</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>API Integration</h3><p>Experienced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Prisma ORM</h3><p>Basic</p></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- BOX 4: Tools & Platforms -->
+      <div class="details-container">
+        <h2 class="experience-sub-title">Tools, Platforms & Professional Skills</h2>
+        <div class="article-container">
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Streamlit</h3><p>Experienced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Power BI</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>PostgreSQL</h3><p>Intermediate</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>ChromaDB</h3><p>Basic</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Problem Solving</h3><p>Advanced</p></div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="icon" class="icon" />
+            <div><h3>Analytical Thinking</h3><p>Advanced</p></div>
+          </article>
+        </div>
+      </div>
+    </div> <!-- end row 2 -->
+
+  </div>
+
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'"/>
+</section>
+
+
+    <section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/AC1.png" alt="Project 1" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">AxisConnect</h2>
+
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/rishixq/AxisConnect'">Github</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://youtu.be/3CkXnIZRWB4'">Video Demo</button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/AC.png" alt="Project 2" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">RevivePoint</h2>
+
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/rishixq/RevivePoint'">Github</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://youtu.be/M4ukOBippUM'">Video Demo</button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="./assets/RP.png" alt="Project 3" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">AceCV</h2>
+
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/rishixq/AceCV'">Github</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://www.youtube.com/playlist?list=PLS0do_RWGgz5wYsmwrn-YOwR0zr4jk0tA'">Video Demo</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+       onclick="location.href='#contact'" />
+</section>
+
+    <section id="contact">
+      <p class="section__text__p1">Let's Connect</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:rishikishore8888@gmail.com">rishikishore8888@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/rishi-kishore-15b17126a">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &#169; 2025 Rishi Kishore. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
