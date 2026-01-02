@@ -334,6 +334,10 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .about-details-container {
@@ -363,6 +367,8 @@ section {
   border-radius: 2rem;
   border: 0.1rem solid rgb(163, 163, 163);
   text-align: left;
+  width: 320px;              /* 👈 fixed card width */
+  max-width: 320px;
 
   /* IMPORTANT FOR HOVER */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
